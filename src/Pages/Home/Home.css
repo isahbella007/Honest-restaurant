@@ -1,0 +1,91 @@
+.home-container{ 
+    width: auto;
+    height: auto;
+}
+.hero-section-container{ 
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.hero-section-text-container{ 
+    width: 70%;
+}
+
+.hero-section-text-container h2{ 
+    width: 60%;
+    text-transform: capitalize;
+    font-size: 50px;
+    font-style: normal;
+    font-family: var(--landingPageHeaderFont);
+    line-height: 4rem;
+    letter-spacing: 0.04em;
+}
+.hero-section-text-container p{
+    margin-top: 2em;
+    width: 70%;
+    font-family: 'Open Sans';
+    line-height: 1.5rem;
+}
+.hero-section-text-container button{ 
+    cursor: pointer; 
+    margin-top: 2rem;
+    background-color: var(--landingPageButton);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    width: 35%;
+    font-family: var(--landingPageHeaderFont);
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.04em;
+}
+.hero-image-container{ 
+    width: 60%;
+    height: 550px;
+    position: relative;
+}
+.frame-bottom{ 
+    background-color: var(--landingPageButton);
+    height: 150px;
+    width: 50%;
+    bottom: 0;
+    left:0;
+    position: absolute;
+}
+.frame-top{ 
+    background-color: var(--landingPageButton);;
+    height: 150px;
+    width: 50%;
+    top: 0;
+    right:0;
+    position: absolute;
+}
+.hero-image-container img{ 
+    width: 90%;
+    height: 95%;
+    object-fit: cover;
+    transform: translate(5%, 3%);
+    position: absolute;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1220px) {
+    .hero-section-container{ 
+        flex-direction: column;
+        width: 90%;
+    }
+    .hero-section-text-container{ 
+        width: 100%;
+    }
+    .hero-section-text-container > h2, .hero-section-text-container p{
+        width: auto;
+    }
+    .hero-section-text-container button{
+        width: 45%;
+    }
+
+    .hero-image-container{
+        width: 100%;
+    }
+}

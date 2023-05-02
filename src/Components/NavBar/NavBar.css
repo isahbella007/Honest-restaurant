@@ -1,0 +1,132 @@
+.header-container {
+  margin-bottom: 0em;
+}
+.header-items {
+  padding: 4rem;
+  padding-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+}
+.center-pieces{ 
+  margin-left: 9em;
+}
+a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: black;
+}
+
+.a-login {
+  margin-left: 15px;
+}
+
+.vertical-line {
+  border: 2px solid black;
+  height: 20px;
+  opacity: 0.5;
+}
+
+.book-table >p{
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+@media screen and (min-width: 100px) and (max-width: 1020px) {
+  .header-items {
+    padding: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* do not show the desktop nav bar */
+  nav {
+    display: none;
+  }
+  /* code for the mobile nav bar */
+  .hamburger,
+  .mobile-nav {
+    display: block;
+  }
+  /* hamburger code */
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    background: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    z-index: 100;
+  }
+  .hamburger .bar,
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -7px);
+  }
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+
+  /* mobile nav style */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    z-index: 98;
+    height: 100vh;
+    background-color: blanchedalmond;
+    padding-top: 100px;
+    transition: 0.6s;
+  }
+  .mobile-nav.is-active {
+    left: 0;
+  }
+  .mobile-nav-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+  }
+  .mobile-nav a {
+    text-decoration: none;
+    font-family: var(--landingPageHeaderFont);
+    font-size: 28px;
+    line-height: 28px;
+    margin: 0 auto;
+  }
+  .mobile-nav-bottom .vertical-line {
+    border: 1px solid #f2f2f2;
+    height: 20px;
+    opacity: 0.2;
+  }
+}

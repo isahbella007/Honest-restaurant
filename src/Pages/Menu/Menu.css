@@ -1,0 +1,44 @@
+body{ 
+    background-color: #FFFCF7;
+}
+.explore{ 
+    margin: 0 auto;
+    width: 70%;
+    line-height: 1.6em;
+    margin-bottom: 3rem;
+}
+.explore h2{ 
+    color: #2E266F;
+    font-size: 48px;
+    text-align: center;
+}
+.explore p{ 
+    width: 90%;
+    margin: 0 auto;
+    color: #707070;
+    margin-top: 1em;
+    text-align: center;
+}
+.card-div{ 
+    margin: 0 auto;
+    margin-top: 4em;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-column: 1/7;
+    gap: 20px;
+}
+
+
+@media screen and (min-width: 100px) and (max-width: 1020px) {
+    .explore{ 
+        width: 80%; 
+    }
+    .explore h2{ 
+        font-size: 32px;
+        line-height: 2rem;
+    }
+    .explore p{ 
+        width: 100%;
+    }
+}

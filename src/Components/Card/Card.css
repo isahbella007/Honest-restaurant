@@ -1,0 +1,60 @@
+.card-container{ 
+    background-color: #FFFFFF;
+    cursor: pointer;
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 2em;
+}
+
+.card-image-container{ 
+    background-color: red;
+    height: 200px;
+    border-radius: 10px;
+}
+.card-image-container > img{ 
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-text{ 
+    padding: 0.8em;
+    font-size: 24px;
+
+}
+.menu-price{ 
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.meal-name{ 
+    color: #2E266F;
+    width: 90%;
+}
+.meal-price{ 
+    color: #35CD8C;
+    font-weight: bold;
+    width: 90%;
+}
+.menu-description{
+    font-size: 14px;
+    margin-top: 0.7em;
+    color: #707070;
+}
+@media screen and (min-width: 100px) and (max-width: 1020px) {
+    .card-container{
+        width: 100%;
+    }
+    .card-text{
+        padding: 0;
+        margin: 0.5rem;
+    }
+    .meal-price, .menu-price{
+        width: 100%;
+    }
+    .meal-name{
+        width: 90%;
+    }
+    
+}

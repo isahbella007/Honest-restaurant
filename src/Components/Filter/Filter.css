@@ -1,0 +1,57 @@
+.main-filter-container{ 
+    width: 90%;
+    margin:  0 auto;  
+}
+
+.filter-container{ 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 20px;
+}
+.sort-by select{ 
+    height: 30px;
+    border-radius: 10px;
+}
+.sort-diet select{ 
+    height: 30px;
+    border-radius: 10px;
+}
+
+.budget{ 
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.budget input, .feeling-lucky input{ 
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+}
+.budget input:focus {outline:none!important;}
+.feeling-lucky{
+    display: flex;
+}
+.feeling-lucky button{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2E266F;
+    height: 30px;
+    color: white;
+    border: 0;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1020px) {
+    .filter-container{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+    .budget{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

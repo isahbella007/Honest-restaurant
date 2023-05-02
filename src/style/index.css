@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@700&family=Open+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: #FFFCF7; */
+}
+:root{ 
+  --landingPageButton: #DCCA87; 
+  --landingPageHeaderFont: 'Cormorant Upright'
+
+}
