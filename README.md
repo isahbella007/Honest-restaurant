@@ -31,7 +31,7 @@ The technology used for this project includes: React, Typescript and css.
 5. When done selecting ingredient quality, you can click on the 'Go Home" text
 7. The items on the navbar do not work :)
 
-![Landing Page](src\assets\landingpage.PNG)
-![Menu Page](src\assets\menu.PNG)
-![Quality and Price Calculation](src\assets\quality.PNG)
-![Highest Possible Quality For a Meal based on a budget](src\assets\highest-quality.PNG)
+![Landing Page](src/assets/landingpage.PNG)
+![Menu Page](src/assets/menu.PNG)
+![Quality and Price Calculation](src/assets/quality.PNG)
+![Highest Possible Quality For a Meal based on a budget](src/assets/highest-quality.PNG)
