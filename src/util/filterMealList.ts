@@ -43,6 +43,7 @@ export function getFilteredMealList(
     maxBudget = ""
   }
   if(minBudget !== "" && maxBudget !== ""){
+    luckyValue = ""
     filteredMealList = filteredMealList.filter((meal) => {
         const price = pricesGotten[mealList.indexOf(meal)]
         return parseFloat(minBudget).toFixed(2) <= price[1].toFixed(2) && parseFloat(maxBudget).toFixed(2) >= price[0].toFixed(2);

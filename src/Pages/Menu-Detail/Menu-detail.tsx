@@ -149,13 +149,24 @@ const Menu_Detail = () => {
                             </div>
                             
                             {Object.keys(matchingQuality).length > 0 && (
+                                <>
                                 <ul className="quality">
                                     {Object.entries(matchingQuality).map(([name,  quality]) => (
-                                        <li className="quality-result">
+                                        <li className="quality-result" key={name}>
                                             For {name} and a budget of ${ingredientBudget[name]} you can get {quality.quality} quality {quality.name}
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="go-home-container">
+                                 
+                                    <>
+                                    <p>Thank you for choosing us. </p>
+                                    <Link to = "/">Go Home :)</Link>
+                                    </>
+                                     
+                                
+                                </div>
+                             </>
                             )}
                         </div>
                     ) : 
@@ -203,7 +214,16 @@ const Menu_Detail = () => {
                                             
                                         </tbody>
                                     </table>
-                                </div>                
+                                </div>    
+                                <div className="go-home-container">
+                                    {qualityTotal > 0 && (
+                                        <>
+                                        <p>Thank you for choosing us. </p>
+                                        <Link to = "/">Go Home :)</Link>
+                                        </>
+                                        
+                                    )}
+                                </div>            
                             </div>
                         )
                     
@@ -214,15 +234,7 @@ const Menu_Detail = () => {
             ): <div><p>Loading...</p></div>    // <p>Details could are loading :)</p>
             }
 
-            <div className="go-home-container">
-                {qualityTotal > 0 && (
-                    <>
-                    <p>Thank you for choosing us. </p>
-                    <Link to = "/">Go Home :)</Link>
-                    </>
-                    
-                )}
-            </div>
+           
         </>
     )
     

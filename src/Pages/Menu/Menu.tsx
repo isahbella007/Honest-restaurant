@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../../Components/Card/Card";
 import Filter from "../../Components/Filter/Filter";
 import NavBar from "../../Components/NavBar/NavBar";
@@ -15,15 +15,32 @@ const Menu = () => {
   const [minBudget, setMinBudget] = useState("")
   const [maxBudget, setMaxBudget] = useState("")
   const [luckyValue, setLuckyValue] = useState("")
-
   const [filteredMealList, filteredMealPrices] = getFilteredMealList(dietOption, MealList,MealIngredient, minBudget, maxBudget, luckyValue)
-
   const [sortedMealList, sortedMealPrices] = sortingOptions(sortOption, filteredMealList, filteredMealPrices)
+  useEffect(() => {
+    if(luckyValue === ""){
+      setLuckyValue("")
+    }
+
+  }, [luckyValue])
+
+  useEffect(() => { 
+    sortingOptions(sortOption, filteredMealList, filteredMealPrices)
+  }, [])
+
+  useEffect(() => {
+    getFilteredMealList(dietOption, MealList,MealIngredient, minBudget, maxBudget, luckyValue)
+  })
+
+  const handleLuckyInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLuckyValue(event.target.value);
+  }
+
+  
   
   return (
     <>
       <NavBar></NavBar>
-      
       <div className="explore">
         <h2>Explore Our Menu & Have Fun!</h2>
         <p>
@@ -39,7 +56,7 @@ const Menu = () => {
         onDietChange={(option) => setDietOption(option)}
         onMinBudgetChange={(value) => setMinBudget(value)}
         onMaxBudgetChange={(value) => setMaxBudget(value)}
-        onHandleFeelingLucky={(value) => setLuckyValue(value)}
+        onInputChange = {handleLuckyInputChange}
       ></Filter>
       {Array.isArray(sortedMealList) && sortedMealList.filter(Boolean).length ? (
         <div className="card-div">

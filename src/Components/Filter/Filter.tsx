@@ -1,11 +1,5 @@
-import { useState } from "react";
 import "./Filter.css";
 const Filter = (props: FilterOptionProps) => {
-  const [feelingLuckyValue, setLuckyPrice] = useState("");
-
-  const handleFeelingLucky = (pricePassed: string) => {
-    props.onHandleFeelingLucky(pricePassed);
-  };
 
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     props.onSortChange(e.target.value);
@@ -26,7 +20,6 @@ const Filter = (props: FilterOptionProps) => {
     if (minBudgetInput && maxBudgetInput) {
       minBudgetInput.disabled = true;
       maxBudgetInput.disabled = true;
-      // props.onMaxBudgetChange("")
     }
   };
 
@@ -91,17 +84,11 @@ const Filter = (props: FilterOptionProps) => {
             onMouseEnter={hideBudgetRange}
             onMouseLeave={showBudgetRange}
           >
+            <h3>Get a random meal:</h3>
             <input
-              onChange={(e) => setLuckyPrice(e.target.value)}
+              onChange={props.onInputChange}
               placeholder="Enter a price"
             ></input>
-            <button
-              onClick={() => {
-                handleFeelingLucky(feelingLuckyValue);
-              }}
-            >
-            Get random meal!
-            </button>
           </div>
         </div>
       </div>

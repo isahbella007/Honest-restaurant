@@ -17,7 +17,7 @@ const NavBar = () => {
             <h2><Link to  = "/">GERICHT</Link></h2>
           </div>
           <nav className="center-pieces">
-            <a href="/earn"> Home</a>
+            <a href="#"> Home</a>
             <a href="#"> Pages</a>
             <a href="#"> Contact us</a>
             <a href="#">Landing</a>

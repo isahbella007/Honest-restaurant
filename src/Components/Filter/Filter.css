@@ -31,18 +31,13 @@
     border: 0;
 }
 .budget input:focus {outline:none!important;}
+.feeling-lucky input:focus {outline:none!important;}
 .feeling-lucky{
     display: flex;
-}
-.feeling-lucky button{ 
-    display: flex;
+    gap: 20px;
     align-items: center;
-    justify-content: center;
-    background-color: #2E266F;
-    height: 30px;
-    color: white;
-    border: 0;
 }
+
 
 @media screen and (min-width: 100px) and (max-width: 1020px) {
     .filter-container{
@@ -53,5 +48,10 @@
     .budget{
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .filter-container{
+        margin: 0 auto;
     }
 }
